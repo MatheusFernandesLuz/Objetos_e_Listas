@@ -1,0 +1,27 @@
+object Form1: TForm1
+  Left = 292
+  Height = 498
+  Top = 120
+  Width = 781
+  Caption = 'Form1'
+  ClientHeight = 498
+  ClientWidth = 781
+  OnMouseDown = FormMouseDown
+  LCLVersion = '1.8.4.0'
+  object Label1: TLabel
+    Left = 0
+    Height = 18
+    Top = 0
+    Width = 781
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Clique em qualquer coordenada:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+end

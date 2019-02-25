@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="4">
+      <Unit0>
+        <Filename Value="project9.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unitprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="65"/>
+        <CursorPos X="22" Y="75"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus\lcl\include\fpimagebitmap.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="132"/>
+        <CursorPos Y="141"/>
+        <UsageCount Value="9"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\..\Downloads\AtividadesLazarus2\unitfuncao15.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit3>
+    </Units>
+    <JumpHistory Count="20" HistoryIndex="19">
+      <Position1>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="29" Column="57" TopLine="9"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="26" Column="11" TopLine="15"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="31" Column="57" TopLine="11"/>
+      </Position3>
+      <Position4>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="52" Column="8" TopLine="42"/>
+      </Position4>
+      <Position5>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="53" Column="8" TopLine="41"/>
+      </Position5>
+      <Position6>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="49" Column="15" TopLine="16"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="54" Column="15" TopLine="34"/>
+      </Position7>
+      <Position8>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="86" Column="22" TopLine="69"/>
+      </Position8>
+      <Position9>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="64" Column="14" TopLine="48"/>
+      </Position9>
+      <Position10>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="66" Column="3" TopLine="54"/>
+      </Position10>
+      <Position11>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="64" Column="7" TopLine="52"/>
+      </Position11>
+      <Position12>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="49" Column="25" TopLine="41"/>
+      </Position12>
+      <Position13>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="138" Column="3" TopLine="123"/>
+      </Position13>
+      <Position14>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="116" Column="37" TopLine="101"/>
+      </Position14>
+      <Position15>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="142" Column="34" TopLine="130"/>
+      </Position15>
+      <Position16>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="117" Column="16" TopLine="109"/>
+      </Position16>
+      <Position17>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="155" Column="100" TopLine="137"/>
+      </Position17>
+      <Position18>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="61" Column="21" TopLine="56"/>
+      </Position18>
+      <Position19>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="82" Column="30" TopLine="68"/>
+      </Position19>
+      <Position20>
+        <Filename Value="unitprincipal.pas"/>
+        <Caret Line="75" Column="57" TopLine="65"/>
+      </Position20>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
