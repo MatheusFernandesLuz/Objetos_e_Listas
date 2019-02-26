@@ -1,9 +1,10 @@
 object FormPrincipal: TFormPrincipal
-  Left = 190
+  Left = 270
   Height = 510
-  Top = 99
+  Top = 29
   Width = 870
   Caption = 'Mini Game'
+  Color = clForm
   Font.CharSet = ANSI_CHARSET
   Font.Height = -16
   Font.Name = 'Arial'
@@ -11,7 +12,6 @@ object FormPrincipal: TFormPrincipal
   Font.Quality = fqDraft
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
-  OnPaint = FormPaint
   LCLVersion = '1.8.4.0'
   object Timer1: TTimer
     OnTimer = Timer1Timer
@@ -19,7 +19,7 @@ object FormPrincipal: TFormPrincipal
     top = 8
   end
   object Timer2: TTimer
-    Interval = 30
+    Interval = 100
     OnTimer = Timer2Timer
     left = 784
     top = 8

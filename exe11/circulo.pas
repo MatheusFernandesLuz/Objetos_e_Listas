@@ -140,26 +140,27 @@ procedure TCirculo.geraRegiao(form: TForm);
 begin
   x1:= 50+trunc(Random(form.Width-200));
   y1:= 0;
-  x2:= x1 + 70;
-  y2:= y1 + 70;
+  x2:= x1 + 50;
+  y2:= y1 + 50;
 
   size:= TRect.Create(x1, y1, x2, y2);
-  region:= CreateRectRgnIndirect(size);
+  region:= CreateEllipticRgnIndirect(size);
 end;
 
 procedure TCirculo.PintaCirculo(form: TForm);
 begin
   form.Canvas.Brush.Color:=RGB(colorR, colorG, colorB);
   form.Canvas.Pen.Style:=psSolid;
+  form.Canvas.Pen.Color:=clDefault;
   form.Canvas.Pen.Width:=1;
   form.Canvas.Ellipse(size);
 
   form.Font.Color:=clBlack;
   form.Font.Name:='Arial';
   form.Font.Style:=[fsBold];
-  form.Font.Size:=12;
+  form.Font.Size:=15;
   SetTextAlign( form.Canvas.Handle, TA_CENTER );
-  form.Canvas.TextOut(x2-trunc(size.Width/2), y2-trunc(size.Height/2)-8, letra);
+  form.Canvas.TextOut(x2-trunc(size.Width/2), y2-trunc(size.Height/2)-11, letra);
 end;
 
 procedure TCirculo.AtualizaCirculo();
@@ -168,12 +169,13 @@ begin
   y1:= y1+1;
   y2:= y2+1;
   size:= TRect.Create(x1, y1, x2, y2);
-  region:= CreateRectRgnIndirect(size);
+  region:= CreateEllipticRgnIndirect(size);
 end;
 
 procedure TCirculo.DestruirCirculo(form: TForm);
 begin
   form.Canvas.Brush.Color:=clDefault;
+  form.Canvas.Pen.Color:=clForm;
   form.Canvas.Ellipse(size);
   DeleteObject(region);
   self.Free;

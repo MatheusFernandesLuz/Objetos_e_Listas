@@ -17,7 +17,6 @@ type
     Timer2: TTimer;
     procedure FormCreate(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: char);
-    procedure FormPaint(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure Timer2Timer(Sender: TObject);
   private
@@ -30,6 +29,7 @@ var
   FormPrincipal: TFormPrincipal;
   L: TList;
   acertos: Integer;
+  erros: Integer;
 
 implementation
 
@@ -43,10 +43,11 @@ var
 begin
   for i:=0 to (L.Count-1) do
   begin
-   if TCirculo(L[i]).y2 >= FormPrincipal.Height-20 then
+   if TCirculo(L[i]).y2 >= FormPrincipal.Height then
     begin
       TCirculo(L[i]).DestruirCirculo(FormPrincipal);
       L.Remove(L[i]);
+      Inc(erros, 1);
       Break;
     end;
   end;
@@ -59,7 +60,7 @@ begin
 
   VerificaColisao:= true;
 
-  while (VerificaColisao = true) and (L.Count > 1) do
+  while (VerificaColisao = true) and (L.Count > 0) do
   begin
    for i:=0 to (L.Count-1) do
    begin
@@ -100,12 +101,11 @@ procedure RepintaCirculos(form: TForm);
 var
   i: Integer;
 begin
-  form.Canvas.Brush.Color:=clDefault;
-  form.Canvas.FillRect(0,0,form.Width, form.Height-20);
 
   for i:=0 to (L.Count-1) do
   begin
-    form.Canvas.Brush.Style:=bsClear;
+    form.Canvas.Brush.Color:=clform;
+    form.Canvas.Pen.Color:=clForm;
     form.Canvas.Ellipse(TCirculo(L[i]).size);
     TCirculo(L[i]).AtualizaCirculo();
     TCirculo(L[i]).PintaCirculo(form);
@@ -131,27 +131,29 @@ begin
 
 end;
 
-procedure TFormPrincipal.FormPaint(Sender: TObject);
-begin
-   Canvas.Brush.Color:=clBlack;
-   Canvas.FillRect(0,FormPrincipal.Height, FormPrincipal.Width, FormPrincipal.Height-20);
-end;
-
 procedure TFormPrincipal.Timer1Timer(Sender: TObject);
 begin
   CriarCirculo();
+
+  if (acertos >= 10) and (Timer1.Interval >= 100) then
+  begin
+   Timer1.Interval:= Timer1.Interval-50;
+   Timer2.Interval:= Timer2.Interval-5;
+   acertos:= 0;
+  end;
+
+  if erros >= 5 then
+  begin
+   Timer1.Enabled:=false;
+   Timer2.Enabled:=false;
+   ShowMessage('GAME OVER');
+  end;
 end;
 
 procedure TFormPrincipal.Timer2Timer(Sender: TObject);
 begin
   RepintaCirculos(FormPrincipal);
   perdeuVida();
-
-  if acertos >= 10 then
-  begin
-   Dec(Integer(Timer1.Interval),50);
-   acertos:=0;
-  end;
 end;
 
 procedure TFormPrincipal.FormCreate(Sender: TObject);
